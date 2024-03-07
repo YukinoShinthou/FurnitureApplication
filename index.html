@@ -1,0 +1,112 @@
+<head>
+    <meta charset=utf-8>
+    <title>My first three.js app</title>
+    <link rel="stylesheet" href="Style.css"/>
+</head>
+<body>
+<div class="main">
+    <div class="leftCorner">
+
+        <div class="Logo">
+            <h3>Syndicate</h3>
+            <hr/>
+        </div>
+
+        <div id="colorWheel" class="colorPicker">
+            <label id="color">Color of Model</label>
+            <input type="color" name="color" />
+            <hr/>
+        </div>
+
+        <div class="MaterialMeasurements">
+            <div class="ranges">
+                <label id="roughness"> R</label>
+                <input type="range" name="roughness">
+            </div>
+
+            <div class="ranges">
+                <label id="emission"> E</label>
+                <input type="range" name="emission">
+            </div>
+
+            <div class="ranges">
+                <label id="metallic"> M</label>
+                <input type="range" name="metallic">
+            </div>
+            <hr/>
+
+            <div class="Light">
+
+                <div class="daynight">
+                    <p>Day Time</p>
+                    <button onclick="changeToDay()" type="submit" class="Day" >Day</button>
+                </div>
+                <hr/>
+                <div class="daynight">
+                    <p>Night Time</p>
+                    <button onclick="changeToNight()" type="submit" class="Night" >Night</button>
+                </div>
+
+            </div>
+
+            <div class="daynightimage">
+                <img src="day.png" alt="error" width="150" height="150" class="img" id="daynightimage">
+            </div>
+            <hr/>
+
+        </div>
+        <div class="ModelMeasurements">
+
+            <div class="Measurements">
+                <label > Width </label>
+                <input type="number" name="width" id="width" required>
+            </div>
+            <div class="Measurements">
+                <label > Height </label>
+                <input type="number" name="height" id="height" required>
+            </div>
+            <div class="Measurements">
+                <label > Length </label>
+                <input type="number" name="length" id="length" required>
+            </div>
+        </div>
+
+        <div class="createbtn">
+            <hr/>
+            <button onclick="Create()" type="submit" class="btnSubmit">Create</button>
+        </div>
+
+
+
+<!--        <div class="AI">-->
+<!--            <hr/>-->
+<!--            <button type="submit" class="AIButton">AI</button>-->
+<!--        </div>-->
+
+    </div>
+    <div class="Middle">
+        <div class="topCorner">
+
+        </div>
+        <div id="test" class="Screen3D">
+
+        </div>
+        <div class="bottomCorner">
+
+        </div>
+
+
+
+    </div>
+    <div class="rightCorner">
+
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+<script src="Main.js"></script>
+<script src="./js/DayNightShift.js"></script>
+<script src="./js/getMeasurementDetails.js"></script>
+<script src="./js/Create.js"></script>
+</body>
